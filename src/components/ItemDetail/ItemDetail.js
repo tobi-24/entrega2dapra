@@ -1,5 +1,5 @@
 import ItemCount from "../ItemCount/ItemCount"
-
+import Footer from "../Footer/Footer"
 const ItemDetail = ({ id, name, img, category, description, price, stock}) => {
     return (
         <article className="CardItem">
@@ -23,9 +23,7 @@ const ItemDetail = ({ id, name, img, category, description, price, stock}) => {
                 </p>
                 <ItemCount initial={1} stock={stock} onAdd={(quantity) => console.log("Cantidad agregada", quantity)} />
             </section>
-            <footer className="ItenFooter">
-                
-            </footer>
+            <Footer />
         </article>
     )
 }
