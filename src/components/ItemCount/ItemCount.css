@@ -1,0 +1,7 @@
+.Controls{
+    display: flex;
+}
+.Button{
+    background-color: lightgray;
+    margin-left: 20px;
+}
