@@ -8,7 +8,9 @@ img{
     justify-content: space-around;
     align-items: center;
 }
-.ItemFooter{
+.ItemButton{
+    background-color: lightgreen;
+    
     display: flex;
     align-items: center;
 }

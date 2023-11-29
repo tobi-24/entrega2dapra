@@ -1,0 +1,13 @@
+.InfoSection{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.Description{
+    width: 50%;
+}
+
+.ItemHeader{
+    font-size: 20px;
+}

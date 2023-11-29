@@ -1,4 +1,8 @@
 .Footer{
-    width: 100vw;
-    background-color: aquamarine;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgreen;
+    height: 80px;
+    width: auto;
 }

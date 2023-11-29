@@ -9,23 +9,7 @@ nav{
     text-align: center;
 }
 
-footer{
-    display:flex;
-    background-color: lightgreen;
-    height: 50px;
-    color:white;
-    text-align: center;
-}
-
-
 a{
     color:white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-
-footer{
-    text-align: center;
-    color:black;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }

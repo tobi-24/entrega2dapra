@@ -17,11 +17,11 @@ function Item ({id, name, img, price, stock}){
                 <p className="Info">
                     Precio: ${price}
                 </p>
-                <p>
+                <p className="Info">
                     Stock disponible: {stock}
                 </p>
             </section>
-            <button className="Itembutton">
+            <button className="ItemButton">
                 <Link to={`/item/${id}`} className="Option">Ver detalle</Link>
             </button>
         </article>

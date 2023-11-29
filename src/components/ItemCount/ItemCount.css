@@ -1,7 +1,28 @@
+.Counter{
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+}
 .Controls{
     display: flex;
+    align-items: center;
 }
 .Button{
-    background-color: lightgray;
+    background-color: white;
+    font-size: 20px;
+    border-radius: 15px;
+    height: 30px;
+    width: 30px;
+}
+.ButtonAdd{
+    background-color: white;
+    border-radius: 8px;
+    height: 40px;
+    width: 130px;
     margin-left: 20px;
+}
+.Number{
+    padding: 0 10px;
 }
