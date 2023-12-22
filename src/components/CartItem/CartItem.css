@@ -1,0 +1,11 @@
+.CartItem{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1em 0;
+    margin-inline:1em; 
+}
+.button{
+    margin-left: 1em;
+    border-radius: 12px;
+}

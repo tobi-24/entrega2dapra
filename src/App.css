@@ -1,14 +1,7 @@
-nav{
-    display:flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    background-color: lightgreen;
-    height: 50px;
-    color:white;
-    text-align: center;
+body{
+    margin: 0;
+    background-color: #5DB696;
 }
-
 a{
     color:white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;

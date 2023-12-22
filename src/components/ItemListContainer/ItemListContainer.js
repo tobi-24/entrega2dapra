@@ -1,33 +1,47 @@
 import 'bulma/css/bulma.min.css';
 import { useState, useEffect } from 'react';
-import { getProduct, getProductByCategory } from "../../asyncMock";
 import ItemList from "../ItemList/ItemList";
 import { useParams } from 'react-router-dom';
+import { getDocs, collection, query, where } from 'firebase/firestore';
+import { db } from '../../services/firebase/firebase';
 
-
-const ItemListContainer = ({greeting}) => {
-    const [products, setProducts] = useState ([])
-
-    const { categoryId } = useParams()
+const ItemListContainer = ({ greeting }) => {
+    const [items, setItems] = useState([]);
+    const { categoryId } = useParams();
 
     useEffect(() => {
-        const asyncFunc = categoryId ? getProductByCategory : getProduct
-        
-        asyncFunc(categoryId)
-            .then(response => {
-                setProducts(response)
-            })
-            .catch(error => {
-                console.log(error)
-            })
-    }, [categoryId])
+        const fetchData = async () => {
+            try {
+                const collectionRef = collection(db, 'item');
+                const q = categoryId ? query(collectionRef, where("category", "==", categoryId)) : collectionRef;
+
+                const response = await getDocs(q);
+
+                if (response && response.docs) {
+                    setItems(
+                        response.docs.map((doc) => {
+                            return { ...doc.data(), id: doc.id };
+                        })
+                    );
+                } else {
+                    console.error('Response or docs array is undefined.');
+                }
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        };
+
+        fetchData();
+    }, [categoryId]);
 
     return (
         <div>
-            <h1 className='subtitle is-2'>{greeting}</h1>
-            <ItemList products={products} />
+            <h2>{greeting}</h2>
+            <section>
+                <ItemList items={items} />
+            </section>
         </div>
-    )
-}
+    );
+};
 
-export default ItemListContainer
+export default ItemListContainer;

@@ -1,0 +1,40 @@
+.Cart{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #97cdba;
+}
+.NoProducts{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px;
+}
+.GoToProducts{
+    background-color: #97cdba;
+    margin-top: 10px;
+    color: black;
+    width: 10em;
+    height: 2em;
+    text-align: center;
+    font-size: 24px;
+}
+.TitleCart{
+    font-size: 24px;
+}
+.CartPrice{
+    margin: 1em 0;
+}
+.CartButton{
+    background-color: #1b6e51;
+    font-size: 20px;
+    border: 2px solid black;
+    color: black;
+    margin-bottom: 0.5em;
+    border-radius: 8px;
+}
+.Checkout{
+    color: black;
+    font-size: 18px;
+    margin-bottom: 0.5em;
+}

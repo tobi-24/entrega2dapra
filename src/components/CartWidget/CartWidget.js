@@ -1,15 +1,19 @@
-import cart from "./assets/cart-png.png";
-import 'bulma/css/bulma.min.css';
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { CartContext } from "../../context/CartContext";
+import { FaCartShopping } from "react-icons/fa6";
+import "./CartWidget.css"
 
 const CartWidget = () => {
+    const { totalQuantity } = useContext(CartContext)
+    
     return (
-        <div className="image is-32x32 cart">
-            <Link to="../Cart/Cart">
-                <img src={cart} alt="cart-widget"/>
-            </Link>
-        </div>
+        <Link to="/cart" className="CartWidget">
+            <FaCartShopping className="CartIcon" />
+            {totalQuantity()}
+        </Link>
     )
 }
+
 
 export default CartWidget

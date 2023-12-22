@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 import "./Item.css"
 
 
-function Item ({id, name, img, price, stock}){
+function Item ({id, name, img, price, quantity}){
     return (
         <article className="CardItem">
             <header className="Header">
@@ -18,7 +18,7 @@ function Item ({id, name, img, price, stock}){
                     Precio: ${price}
                 </p>
                 <p className="Info">
-                    Stock disponible: {stock}
+                    Stock disponible: {quantity}
                 </p>
             </section>
             <button className="ItemButton">
